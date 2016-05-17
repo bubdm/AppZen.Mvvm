@@ -8,17 +8,15 @@
     <owners>Justim Odendaal</owners>
     <licenseUrl>https://github.com/jodendaal/AppZen.Mvvm/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/jodendaal/AppZen.Mvvm</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/7143305?v=3&s=460</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Light Weight MVVM Framework for Winforms and Xamarin.Forms</description>
     <releaseNotes></releaseNotes>
     <copyright></copyright>
     <tags>MVVM winforms</tags>
-<dependencies>
-  <dependency id="AppZen.MVVM.Core" />
-</dependencies>
   </metadata>
   <files>
+	<file src="AppZen.MVVM.Windows\bin\$configuration$\AppZen.MVVM.Core.dll" target="lib\net40\" />
 	<file src="AppZen.MVVM.Windows\bin\$configuration$\AppZen.MVVM.Windows.dll" target="lib\net40\" />
   </files>
 
