@@ -13,7 +13,7 @@ namespace AppZen.Mvvm.Core.Extensions
         public class Switch<TSource>
         {
             private TSource value;
-            private bool handled = false;
+            private bool _handled;
 
             internal Switch(TSource value)
             {
@@ -23,14 +23,14 @@ namespace AppZen.Mvvm.Core.Extensions
             public Switch<TSource> Case<TTarget>(Action<TTarget> action)
                 where TTarget : TSource
             {
-                if (!handled)
+                if (!_handled)
                 {
                     var sourceType = value.GetType();
                     var targetType = typeof(TTarget);
                     if (targetType.GetTypeInfo().IsAssignableFrom(sourceType.GetTypeInfo()))
                     {
                         action?.Invoke((TTarget)value);
-                        handled = true;
+                        _handled = true;
                     }
                 }
 
@@ -39,7 +39,7 @@ namespace AppZen.Mvvm.Core.Extensions
 
             public void Default(Action<TSource> action)
             {
-                if (!handled)
+                if (!_handled)
                     action?.Invoke(value);
             }
         }
