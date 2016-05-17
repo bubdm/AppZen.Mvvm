@@ -16,6 +16,6 @@
     <tags>MVVM winforms</tags>
   </metadata>
   <files>
-	<file src="AppZen.MVVM.Core\bin\$configuration$\AppZen.MVVM.Core.dll" target="lib\net40\" />
+	<file src="bin\$configuration$\AppZen.MVVM.Core.dll" target="lib\net40\" />
   </files>
 </package>
