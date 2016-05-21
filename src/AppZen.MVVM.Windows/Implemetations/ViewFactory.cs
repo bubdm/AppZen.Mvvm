@@ -36,7 +36,9 @@ namespace AppZen.Mvvm.Windows.Implemetations
                 if (resolvedForm != null)
                 {
                     resolvedForm.CloseAction = () => Container.Release(resolvedForm);
-                    resolvedForm.ViewModel?.Init(argumentsAsAnonymousType);
+                    var init = resolvedForm?.ViewModel?.Init(argumentsAsAnonymousType);
+                    if (init != null)
+                        await init;
 
                     var args = new EventArgsHandled<Form>(resolvedForm as Form);
                     Presenter.OnFormLoaded(args);
